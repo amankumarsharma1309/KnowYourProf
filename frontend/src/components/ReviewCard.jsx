@@ -1,9 +1,15 @@
 import "./ReviewCard.css";
+import { useState } from "react";
+import api from "../services/api";
 import { BsPatchCheckFill } from "react-icons/bs";
 import { FaStar } from "react-icons/fa";
 import { BiLike, BiDislike } from "react-icons/bi";
 
 function ReviewCard({ review }) {
+  const [helpfulCount, setHelpfulCount] = useState(review.helpfulCount);
+
+  const [notHelpfulCount, setNotHelpfulCount] = useState(review.notHelpfulCount);
+  
   const reviewTitle = () => {
 
     if (review.overallRating === 5) return "Excellent Teacher";
@@ -15,6 +21,43 @@ function ReviewCard({ review }) {
     if (review.overallRating === 2) return "Average";
 
     return "Poor";
+  };
+  const handleVote = async (vote) => {
+
+    try {
+
+      const token = localStorage.getItem("token");
+
+      const response = await api.post(
+
+        `/reviews/${review._id}/vote`,
+
+        {
+          vote
+        },
+
+        {
+          headers: {
+            authorization: token
+          }
+        }
+
+      );
+
+      setHelpfulCount(response.data.helpfulCount);
+
+      setNotHelpfulCount(response.data.notHelpfulCount);
+
+    }
+
+    catch (error) {
+
+      console.log(error);
+
+      alert(error.response?.data?.message || "Voting failed.");
+
+    }
+
   };
 
   return (
@@ -73,21 +116,31 @@ function ReviewCard({ review }) {
       </p>
       <div className="review-actions">
 
-        <button className="action-btn">
+        <div className="review-actions">
 
-          <BiLike />
+          <button
+            className="action-btn"
+            onClick={() => handleVote("helpful")}
+          >
 
-          Helpful {review.helpfulCount > 0 && `(${review.helpfulCount})`}
+            <BiLike />
 
-        </button>
+            Helpful {helpfulCount > 0 && `(${helpfulCount})`}
 
-        <button className="action-btn">
+          </button>
 
-          <BiDislike />
+          <button
+            className="action-btn"
+            onClick={() => handleVote("notHelpful")}
+          >
 
-          {review.notHelpfulCount > 0 && review.notHelpfulCount}
+            <BiDislike />
 
-        </button>
+            Not Helpful {notHelpfulCount > 0 && `(${notHelpfulCount})`}
+
+          </button>
+
+        </div>
 
       </div>
       <div className="review-footer">

@@ -34,14 +34,112 @@ router.get("/professor/:id", async (req, res) => {
             professorId: req.params.id,
             status: "approved"
         });
+        const formattedReviews = reviews.map(review => {
 
-        res.json(reviews);
+            const reviewObj = review.toObject();
+
+            return {
+
+                ...reviewObj,
+
+                helpfulCount: review.helpfulVotes.length,
+
+                notHelpfulCount: review.notHelpfulVotes.length
+
+            };
+
+        });
+
+        res.json(formattedReviews);
 
     } catch (error) {
         res.status(500).json({
             message: error.message
         });
     }
+});
+router.post("/:id/vote", authMiddleware, async (req, res) => {
+
+    try {
+
+        const { vote } = req.body;
+
+        const review = await Review.findById(req.params.id);
+
+        if (!review) {
+            return res.status(404).json({
+                message: "Review not found"
+            });
+        }
+
+        const userId = req.userId;
+
+        const helpfulIndex = review.helpfulVotes.findIndex(
+            id => id.toString() === userId
+        );
+
+        const notHelpfulIndex = review.notHelpfulVotes.findIndex(
+            id => id.toString() === userId
+        );
+
+        if (vote === "helpful") {
+
+            if (helpfulIndex !== -1) {
+
+                review.helpfulVotes.splice(helpfulIndex, 1);
+
+            } else {
+
+                if (notHelpfulIndex !== -1) {
+                    review.notHelpfulVotes.splice(notHelpfulIndex, 1);
+                }
+
+                review.helpfulVotes.push(userId);
+
+            }
+
+        }
+
+        else if (vote === "notHelpful") {
+
+            if (notHelpfulIndex !== -1) {
+
+                review.notHelpfulVotes.splice(notHelpfulIndex, 1);
+
+            } else {
+
+                if (helpfulIndex !== -1) {
+                    review.helpfulVotes.splice(helpfulIndex, 1);
+                }
+
+                review.notHelpfulVotes.push(userId);
+
+            }
+
+        }
+
+        await review.save();
+
+        res.json({
+
+            helpfulCount: review.helpfulVotes.length,
+
+            notHelpfulCount: review.notHelpfulVotes.length
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            message: error.message
+
+        });
+
+    }
+
 });
 
 router.get("/pending", authMiddleware, async (req, res) => {

@@ -112,15 +112,19 @@ const reviewSchema = new mongoose.Schema({
         enum: ["pending", "approved", "rejected"],
         default: "pending"
     },
-    helpfulCount: {
-        type: Number,
-        default: 0
-    },
+    helpfulVotes: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User"
+        }
+    ],
 
-    notHelpfulCount: {
-        type: Number,
-        default: 0
-    },
+    notHelpfulVotes: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User"
+        }
+    ],
 
 }, {
     timestamps: true
