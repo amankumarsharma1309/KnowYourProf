@@ -20,24 +20,24 @@ function Footer() {
           </div>
 
           <div className="footer-item">
-            👨‍💻 Developed by Aman Sharma
+            👨‍💻 Developed by an Anonymous Guy
           </div>
 
         </div>
 
         <div className="footer-social">
 
-          <a href="mailto:amankumarsharma77187@gmail.com">
+          <a href="mailto:chukundrasharma77187@gmail.com">
             <FaEnvelope />
           </a>
 
-          <a
+          {/* <a
             href="https://github.com/amankumarsharma1309/"
             target="_blank"
             rel="noreferrer"
           >
             <FaGithub />
-          </a>
+          </a> */}
 
           <a
             href="https://linkedin.com/in/your-linkedin"

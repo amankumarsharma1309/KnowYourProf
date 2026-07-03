@@ -32,7 +32,7 @@ function Register() {
     setLoading(true);
 
     try {
-      const fullEmail = `${email}@nitkkr.ac.in`;
+      const fullEmail = email.trim().toLowerCase();
 
       await api.post("/auth/send-otp", {
         name,
@@ -57,6 +57,9 @@ function Register() {
       <form className="login-card" onSubmit={handleRegister}>
 
         <h1>Join KnowYourProf</h1>
+        <p className="auth-subtitle">
+          Create your account using any valid email address or Google.
+        </p>
 
         <div className="input-group">
           <label>Name</label>
@@ -71,17 +74,17 @@ function Register() {
         </div>
 
         <div className="input-group">
-          <label>College Email</label>
+          <label>Email</label>
 
           <div className="email-input">
             <input
-              type="text"
-              placeholder="123103022"
+              type="email"
+              placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
 
-            <span>@nitkkr.ac.in</span>
+
           </div>
         </div>
 

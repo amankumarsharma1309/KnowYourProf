@@ -188,3 +188,11 @@
     color:#1e3a8a;
     word-break:break-word;
 }
+
+.auth-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin-top: -6px;
+  margin-bottom: 24px;
+}

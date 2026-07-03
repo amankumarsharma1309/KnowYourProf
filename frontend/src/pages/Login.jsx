@@ -21,7 +21,7 @@ function Login() {
     setLoading(true);
 
     try {
-      const fullEmail = `${email}@nitkkr.ac.in`;
+      const fullEmail = email.trim().toLowerCase();
 
       const response = await api.post("/auth/login", {
         email: fullEmail,
@@ -48,19 +48,22 @@ function Login() {
       <form className="login-card" onSubmit={handleLogin}>
 
         <h1>Welcome Back</h1>
+        <p className="auth-subtitle">
+          Sign in using any valid email address or Google.
+        </p>
 
         <div className="input-group">
-          <label>College Email</label>
+          <label> Email</label>
 
           <div className="email-input">
             <input
-              type="text"
-              placeholder="eg: 123103022"
+              type="email"
+              placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
 
-            <span>@nitkkr.ac.in</span>
+
           </div>
         </div>
 

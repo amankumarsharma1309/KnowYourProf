@@ -14,9 +14,11 @@ router.post("/send-otp", async (req, res) => {
     try {
         const { name, email, password } = req.body;
 
-        if (!email.endsWith("@nitkkr.ac.in")) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(email)) {
             return res.status(400).json({
-                message: "Only NIT KKR email addresses are allowed"
+                message: "Please enter a valid email address"
             });
         }
 
@@ -45,9 +47,9 @@ router.post("/send-otp", async (req, res) => {
         await transporter.sendMail({
             from: process.env.EMAIL_FROM,
             to: email,
-            subject: "Professor Insight - Email Verification",
+            subject: "KnowYourProf - Email Verification",
             html: `
-                <h2>Professor Insight</h2>
+                <h2>KnowYourProf</h2>
                 <p>Your OTP is:</p>
                 <h1>${otp}</h1>
                 <p>This OTP will expire in 5 minutes.</p>
@@ -200,11 +202,7 @@ router.post("/google", async (req, res) => {
         const payload = ticket.getPayload();
 
         const { name, email } = payload;
-        if (!email.endsWith("@nitkkr.ac.in")) {
-            return res.status(403).json({
-                message: "Only NIT KURUKSHETRA email addresses are allowed"
-            });
-        }
+
 
         let user = await User.findOne({ email });
         if (type === "register" && user) {
