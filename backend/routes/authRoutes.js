@@ -214,19 +214,23 @@ router.post("/google", async (req, res) => {
         }
 
         if (type === "login" && !user) {
-            user = await User.create({
+            user = new User({
                 name,
                 email,
                 provider: "google",
             });
+
+            await user.save();
         }
 
         if (type === "register" && !user) {
-            user = await User.create({
+            user = new User({
                 name,
                 email,
                 provider: "google",
             });
+
+            await user.save();
         }
 
 
