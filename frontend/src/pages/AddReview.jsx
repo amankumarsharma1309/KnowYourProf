@@ -22,6 +22,7 @@ function AddReview() {
     wouldRecommend: true,
     reviewText: ""
   });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -32,8 +33,10 @@ function AddReview() {
     });
   };
   const handleSubmit = async (e) => {
+    
 
     e.preventDefault();
+    setLoading(true);
 
     try {
 
@@ -50,6 +53,8 @@ function AddReview() {
       console.log(err.response);
 
       alert(err.response?.data?.message || "Failed to submit review.");
+    } finally {
+      setLoading(false);
     }
 
   };
@@ -270,8 +275,16 @@ function AddReview() {
         <button
           type="submit"
           className="submit-btn"
+          disabled={loading}
         >
-          Submit Review
+          {loading ? (
+            <>
+              <span className="spinner"></span>
+              Submitting...
+            </>
+          ) : (
+            "Submit Review"
+          )}
         </button>
 
       </form>
