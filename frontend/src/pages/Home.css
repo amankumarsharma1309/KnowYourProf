@@ -18,22 +18,13 @@
     color: #6b7280;
 }
 
-/* .professor-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(280px,320px));
-
-    justify-content:center;
-
-    gap:32px;
-} */
 .carousel {
     overflow: hidden;
     width: 100%;
     position: relative;
     margin-top: 40px;
 }
+
 
 .carousel-track {
     display: flex;
@@ -134,68 +125,80 @@
     margin-bottom: 10px;
 }
 
-@media (max-width:768px){
+/* ================= MOBILE ================= */
 
-    .professor-section{
-        padding:40px 16px;
+@media (max-width:768px) {
+
+    .professor-section {
+        padding: 40px 16px;
     }
 
-    .section-header h2{
-        font-size:32px;
+    .section-header h2 {
+        font-size: 32px;
     }
 
-    .section-header p{
-        font-size:16px;
+    .section-header p {
+        font-size: 16px;
     }
 
-    .stats-section{
+    .stats-section {
 
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
 
-        gap:18px;
+        gap: 18px;
 
-        margin:30px auto;
+        margin: 30px auto;
 
-        padding:0 16px;
+        padding: 0 16px;
     }
 
-    .stats-card{
+    .stats-card {
 
-        padding:24px;
+        padding: 24px;
     }
 
-    .stats-card h2{
-        font-size:34px;
+    .stats-card h2 {
+        font-size: 34px;
     }
 
-    .stats-card h3{
-        font-size:28px;
+    .stats-card h3 {
+        font-size: 28px;
     }
 
-    .stats-card p{
-        font-size:16px;
+    .stats-card p {
+        font-size: 16px;
     }
 
-    .carousel{
+    .carousel {
 
-        overflow-x:auto;
+        overflow-x: auto;
+        overflow-y: hidden;
 
-        overflow-y:hidden;
+        scroll-snap-type: x mandatory;
 
-        scroll-snap-type:x mandatory;
+        -webkit-overflow-scrolling: touch;
 
-        -webkit-overflow-scrolling:touch;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        padding-bottom: 10px;
     }
 
-    .carousel-track{
-
-        animation:none;
-
-        width:max-content;
+    .carousel::-webkit-scrollbar {
+        display: none;
     }
 
-    .carousel::-webkit-scrollbar{
-        display:none;
+    .carousel-track {
+
+        animation: none;
+
+        display: flex;
+
+        gap: 20px;
+
+        width: max-content;
+
+        padding: 0 16px;
     }
 
 }
