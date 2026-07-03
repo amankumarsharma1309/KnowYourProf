@@ -1,0 +1,197 @@
+.review-card {
+
+    padding: 22px 24px;
+
+    border-bottom: 1px solid #ececec;
+
+    background: white;
+}
+
+.review-top {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.review-top {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+.review-title {
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    color: #111827;
+}
+
+.rating {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    background: #16a34a;
+
+    color: white;
+
+    padding: 5px 10px;
+
+    border-radius: 4px;
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+    width: fit-content;
+}
+
+.rating-star {
+
+    color: white;
+
+    font-size: .75rem;
+}
+
+.review-course {
+
+    margin: 12px 0;
+
+    font-size: 1.05rem;
+
+    font-weight: 600;
+
+    color: #111827;
+}
+
+.review-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin: 14px 0;
+}
+
+.tag {
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    font-size: .85rem;
+
+    font-weight: 500;
+}
+
+.review-text {
+
+    margin: 16px 0;
+
+    padding: 0;
+
+    background: none;
+
+    border: none;
+
+    border-radius: 0;
+
+    color: #374151;
+
+    font-size: .97rem;
+
+    line-height: 1.7;
+}
+
+.review-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 16px;
+
+    color: #6b7280;
+
+    font-size: .9rem;
+
+    font-weight: 500;
+}
+
+.verified-icon {
+
+    color: #111827;
+
+    font-size: 1rem;
+
+    flex-shrink: 0;
+}
+
+.review-actions {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin: 18px 0 12px;
+}
+
+.action-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 16px;
+
+    background: white;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 999px;
+
+    color: #4b5563;
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.action-btn:hover {
+
+    background: #f9fafb;
+
+    border-color: #9ca3af;
+}
+
+.action-btn svg {
+
+    font-size: 1.15rem;
+}

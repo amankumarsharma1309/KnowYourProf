@@ -1,0 +1,156 @@
+.professor-card {
+    background: #fff;
+
+    border-radius: 18px;
+
+    padding: 22px;
+    max-width: 260px;
+    width: 100%;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+
+    transition: .3s;
+
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.professor-card:hover {
+
+    transform: translateY(-8px) scale(1.02);
+
+    box-shadow: 0 14px 35px rgba(0, 0, 0, .12);
+
+    border: 1px solid #2563eb;
+}
+
+.avatar {
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #dbeafe;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto 24px;
+}
+
+.avatar svg {
+
+    font-size: 2.2rem;
+
+    color: #2563eb;
+}
+
+.professor-card h2 {
+
+    color: #1f2937;
+
+    margin-bottom: 8px;
+
+    font-size: 1.2rem;
+}
+
+.department {
+
+    color: #6b7280;
+
+    margin-bottom: 24px;
+}
+
+
+
+.department {
+
+    display: block;
+
+    width: fit-content;
+
+    margin: 18px auto;
+
+    padding: 7px 16px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border-radius: 30px;
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+    margin: 18px 0;
+}
+
+.designation {
+
+    color: #6b7280;
+
+    margin-top: -4px;
+
+    margin-bottom: 10px;
+
+    font-size: .95rem;
+}
+
+.card-stats {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 28px 0;
+
+    color: #374151;
+
+    font-weight: 600;
+
+    font-size: .95rem;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+.view-btn {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.view-btn:hover {
+
+    background: #1d4ed8;
+}
+
+.professor-card {
+
+    text-align: center;
+}

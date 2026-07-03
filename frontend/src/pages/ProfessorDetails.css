@@ -1,0 +1,280 @@
+.professor-details{
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.professor-header{
+    background: white;
+    border-radius: 18px;
+
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+
+    margin-bottom: 40px;
+}
+
+.professor-avatar{
+
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    background:#dbeafe;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:2.5rem;
+
+    margin-bottom:20px;
+}
+
+.professor-header h1{
+
+    color:#1f2937;
+
+    margin-bottom:12px;
+
+    font-size:2.3rem;
+}
+
+.department-badge{
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    padding:8px 18px;
+
+    border-radius:20px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+}
+
+.rating-summary{
+
+    text-align:center;
+}
+
+.rating-summary h3{
+
+    color:#f59e0b;
+
+    font-size:1.4rem;
+
+    margin-bottom:8px;
+}
+
+.rating-summary p{
+
+    color:#6b7280;
+}
+
+.reviews-section h2{
+
+    margin-bottom:25px;
+
+    color:#1f2937;
+}
+
+.summary-card{
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 35px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.summary-card h2{
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 30px;
+}
+
+.summary-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.summary-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 20px;
+
+    background:#f8fafc;
+
+    border-radius:12px;
+
+    font-size:17px;
+}
+
+.summary-item span{
+    color:#555;
+}
+
+.summary-item strong{
+    color:#1e40af;
+}
+.summary-subtitle{
+    text-align:center;
+    color:#6b7280;
+    margin-top:-12px;
+    margin-bottom:30px;
+    font-size:15px;
+}
+
+.rating-breakdown{
+    background:white;
+    margin:35px 0;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.rating-breakdown h2{
+    text-align:center;
+    color:#1e3a8a;
+    margin-bottom:25px;
+}
+
+.rating-row{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:16px;
+}
+
+.rating-row span:first-child{
+    width:90px;
+    font-size:16px;
+}
+
+.rating-row span:last-child{
+    width:30px;
+    text-align:right;
+    font-weight:600;
+}
+
+.rating-bar{
+    flex:1;
+    height:12px;
+    background:#e5e7eb;
+    border-radius:50px;
+    overflow:hidden;
+}
+
+.rating-fill{
+    height:100%;
+    background:#fbbf24;
+    border-radius:50px;
+    transition:width 0.4s ease;
+}
+
+.rating-row span:first-child{
+    width:90px;
+    color:#fbbf24;
+    font-size:18px;
+}
+
+
+.popular-tags{
+    background:white;
+    margin:35px 0;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.popular-tags h2{
+    text-align:center;
+    color:#1e3a8a;
+    margin-bottom:25px;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.tag{
+    padding:12px 20px;
+    border-radius:50px;
+    font-weight:600;
+    font-size:15px;
+}
+
+.strict{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+.moderate{
+    background:#fef3c7;
+    color:#b45309;
+}
+
+.easy{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.courses-card{
+    background:white;
+    margin:35px 0;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.courses-card h2{
+    text-align:center;
+    color:#1e3a8a;
+    margin-bottom:25px;
+}
+
+.courses-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.course-chip{
+    background:#dbeafe;
+    color:#1d4ed8;
+    padding:12px 20px;
+    border-radius:50px;
+    font-weight:600;
+}
+
+.review-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.review-btn:hover {
+    background: #1d4ed8;
+}
