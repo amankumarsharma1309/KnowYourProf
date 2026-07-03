@@ -1,10 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
     const token = localStorage.getItem("token");
     const role = localStorage.getItem("role");
     const navigate = useNavigate();
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const handleLogout = () => {
         localStorage.removeItem("token");
@@ -20,7 +23,14 @@ function Navbar() {
                 <h2>KnowYourProf</h2>
             </Link>
 
-            <div className="nav-links">
+            <button
+                className="menu-btn"
+                onClick={() => setMenuOpen(!menuOpen)}
+            >
+                {menuOpen ? <FaTimes /> : <FaBars />}
+            </button>
+
+            <div className={`nav-links ${menuOpen ? "active" : ""}`}>
 
                 <Link to="/">Home</Link>
 
