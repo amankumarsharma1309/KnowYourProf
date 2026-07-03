@@ -1,0 +1,33 @@
+.star-rating{
+
+    display:flex;
+
+    gap:8px;
+
+    font-size:32px;
+
+    cursor:pointer;
+}
+
+.star{
+
+    color:#d1d5db;
+
+    transition:.2s;
+}
+
+.star.active{
+
+    color:#fbbf24;
+}
+
+@media (max-width:768px){
+
+    .star-rating{
+
+        font-size:26px;
+
+        gap:6px;
+    }
+
+}

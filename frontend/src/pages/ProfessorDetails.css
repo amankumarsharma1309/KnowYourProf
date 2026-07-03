@@ -278,3 +278,102 @@
 .review-btn:hover {
     background: #1d4ed8;
 }
+
+@media (max-width:768px){
+
+    .professor-details{
+        margin:25px auto;
+        padding:0 16px;
+    }
+
+    .professor-header{
+        padding:28px 20px;
+        margin-bottom:25px;
+    }
+
+    .professor-avatar{
+        width:75px;
+        height:75px;
+        font-size:2rem;
+        margin-bottom:16px;
+    }
+
+    .professor-header h1{
+        font-size:2rem;
+        text-align:center;
+    }
+
+    .department-badge{
+        margin-bottom:18px;
+        font-size:14px;
+    }
+
+    .rating-summary h3{
+        font-size:1.8rem;
+    }
+
+    .rating-summary p{
+        font-size:16px;
+    }
+
+    .review-btn{
+        width:100%;
+        padding:16px;
+        font-size:17px;
+        margin-top:22px;
+    }
+
+    .summary-card,
+    .rating-breakdown,
+    .popular-tags,
+    .courses-card{
+        padding:22px 18px;
+        margin:24px 0;
+        border-radius:16px;
+    }
+
+    .summary-card h2,
+    .rating-breakdown h2,
+    .popular-tags h2,
+    .courses-card h2{
+        font-size:2rem;
+        margin-bottom:20px;
+    }
+
+    .summary-subtitle{
+        margin-top:0;
+        margin-bottom:22px;
+        font-size:15px;
+    }
+
+    .summary-grid{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .summary-item{
+        padding:16px;
+        font-size:16px;
+    }
+
+    .rating-row{
+        gap:10px;
+    }
+
+    .rating-row span:first-child{
+        width:65px;
+        font-size:16px;
+    }
+
+    .tag,
+    .course-chip{
+        font-size:14px;
+        padding:10px 16px;
+    }
+
+    .reviews-section h2{
+        font-size:2rem;
+        text-align:center;
+    }
+
+}
