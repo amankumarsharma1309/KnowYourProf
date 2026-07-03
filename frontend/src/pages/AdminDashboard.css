@@ -193,3 +193,112 @@
 
     object-fit:contain;
 }
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+    .admin-dashboard{
+
+        padding:90px 16px 30px;
+    }
+
+    .admin-dashboard h1{
+
+        font-size:2rem;
+    }
+
+    .pending-count{
+
+        font-size:16px;
+
+        margin-bottom:24px;
+    }
+
+    .admin-navbar{
+
+        flex-direction:column;
+
+        gap:16px;
+
+        align-items:center;
+
+        margin-bottom:24px;
+    }
+
+    .admin-logo{
+
+        font-size:24px;
+    }
+
+    .logo-image{
+
+        width:36px;
+        height:36px;
+    }
+
+    .review-box{
+
+        padding:20px 18px;
+
+        border-radius:16px;
+
+        margin:18px auto;
+    }
+
+    .review-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+    }
+
+    .review-header h2{
+
+        font-size:1.3rem;
+    }
+
+    .review-header span{
+
+        font-size:18px;
+    }
+
+    .review-info{
+
+        flex-direction:column;
+
+        gap:8px;
+
+        font-size:15px;
+    }
+
+    .review-text{
+
+        padding:16px;
+
+        font-size:15px;
+
+        line-height:1.7;
+    }
+
+    .action-buttons{
+
+        flex-direction:column;
+
+        gap:12px;
+    }
+
+    .approve-btn,
+    .reject-btn{
+
+        width:100%;
+
+        padding:15px;
+
+        font-size:16px;
+    }
+
+}

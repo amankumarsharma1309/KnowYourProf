@@ -50,7 +50,7 @@ function VerifyOTP() {
 
                 <h1>Verify OTP</h1>
 
-                <p style={{ marginBottom: "20px" }}>
+                <p className="otp-text">
                     OTP sent to
                     <br />
                     <strong>{email}</strong>

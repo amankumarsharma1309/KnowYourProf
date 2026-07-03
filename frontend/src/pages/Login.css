@@ -176,3 +176,15 @@
     }
 
 }
+
+.otp-text{
+    margin-bottom:20px;
+    text-align:center;
+    color:#4b5563;
+    line-height:1.6;
+}
+
+.otp-text strong{
+    color:#1e3a8a;
+    word-break:break-word;
+}
